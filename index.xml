@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>My New Hugo Site</title>
-    <link>http://localhost:1313/</link>
+    <link>https://kuldeepsidhu.github.io/public-blog/</link>
     <description>Recent content on My New Hugo Site</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 01 Aug 2024 10:23:48 +0530</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://kuldeepsidhu.github.io/public-blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Paris Olympics</title>
-      <link>http://localhost:1313/posts/paris-olympics/</link>
+      <link>https://kuldeepsidhu.github.io/public-blog/posts/paris-olympics/</link>
       <pubDate>Thu, 01 Aug 2024 10:23:48 +0530</pubDate>
-      <guid>http://localhost:1313/posts/paris-olympics/</guid>
+      <guid>https://kuldeepsidhu.github.io/public-blog/posts/paris-olympics/</guid>
       <description>Excitement Builds for the Paris 2024 Olympics # As the Paris 2024 Olympics approach, excitement is mounting for what promises to be a spectacular celebration of sports and culture. Scheduled to take place from July 26 to August 11, 2024, the Games will showcase the best athletes from around the world competing in a diverse array of events across the French capital.&#xA;Key Highlights # 1. Opening Ceremony at the Seine # The Paris 2024 Olympics will kick off with a historic opening ceremony unlike any other.</description>
     </item>
     <item>
       <title>Current Affairs Aug 2024</title>
-      <link>http://localhost:1313/posts/current-affairs/</link>
+      <link>https://kuldeepsidhu.github.io/public-blog/posts/current-affairs/</link>
       <pubDate>Thu, 01 Aug 2024 10:18:33 +0530</pubDate>
-      <guid>http://localhost:1313/posts/current-affairs/</guid>
+      <guid>https://kuldeepsidhu.github.io/public-blog/posts/current-affairs/</guid>
       <description>Current Affairs: August 2024 Highlights # As we move through August 2024, the global landscape is witnessing significant developments across various sectors, from politics and economics to climate change and technology. Here&amp;rsquo;s a roundup of the most noteworthy current affairs:&#xA;1. Global Economic Outlook # Economic Slowdown Concerns # Global economic growth is showing signs of slowing down as major economies grapple with inflationary pressures and supply chain disruptions. The International Monetary Fund (IMF) has revised its global growth forecast for 2024, predicting a more modest expansion than initially anticipated.</description>
     </item>
   </channel>

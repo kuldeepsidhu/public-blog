@@ -2,20 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://kuldeepsidhu.github.io/public-blog/</loc>
     <lastmod>2024-08-01T10:23:48+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/paris-olympics/</loc>
+    <loc>https://kuldeepsidhu.github.io/public-blog/posts/paris-olympics/</loc>
     <lastmod>2024-08-01T10:23:48+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>https://kuldeepsidhu.github.io/public-blog/posts/</loc>
     <lastmod>2024-08-01T10:23:48+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/current-affairs/</loc>
+    <loc>https://kuldeepsidhu.github.io/public-blog/posts/current-affairs/</loc>
     <lastmod>2024-08-01T10:18:33+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://kuldeepsidhu.github.io/public-blog/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://kuldeepsidhu.github.io/public-blog/tags/</loc>
   </url>
 </urlset>
