@@ -143,7 +143,7 @@ Key Highlights 🔗1. Opening Ceremony at the Seine 🔗The Paris 2024 Olympics 
     
     
     <div class="contact-form">
-  <h2>Contact Us</h2>
+  <h2>Add comment</h2>
   <form action="#" method="post" id="contactForm">
       <label for="name">Name:</label>
       <input type="text" id="name" name="name" required>
@@ -193,16 +193,59 @@ Key Highlights 🔗1. Opening Ceremony at the Seine 🔗The Paris 2024 Olympics 
           
           var name = document.getElementById('name').value;
           var message = document.getElementById('message').value;
+          var postUrl = window.location.pathname;
 
           
 
           
           console.log('Name:', name);
           console.log('Message:', message);
+          console.log('PostURL:', postUrl);
+
+          var requestBody = {};
+          requestBody.name = name;
+          requestBody.message = message;
+          requestBody.postUrl = postUrl;
+
+          console.log(JSON.stringify(requestBody));
+
+          fetchComment();
+
 
           
           document.getElementById('contactForm').reset();
       });
+
+      async function fetchComment() {
+        
+        const url = 'https://whimsical-kulfi-bc88c4.netlify.app/addcomment/kuldeep/this%20is%20test%20message';
+
+        try {
+          
+          const response = await fetch(url);
+
+          
+          if (response.ok) {
+            
+            const data = await response.json();
+            console.log('Response Data:', data);
+            alert(data);
+            return data;
+          } else {
+            
+            console.error('HTTP Error:', response.status, response.statusText);
+            const errorData = await response.text(); 
+            console.error('Error Details:', errorData);
+            alert(errorData);
+            return null;
+          }
+        } catch (error) {
+          
+          console.error('Fetch Error:', error.message);
+          return null;
+        }
+      }
+
   </script>
   </body>
 </html>
