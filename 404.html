@@ -3,6 +3,44 @@
   <head>
     <title>My New Hugo Site</title>
 
+    <style>
+      body {
+          font-family: Arial, sans-serif;
+          margin: 20px;
+      }
+      .contact-form {
+          max-width: 500px;
+          margin: auto;
+          padding: 20px;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+      }
+      .contact-form label {
+          display: block;
+          margin-bottom: 8px;
+          font-weight: bold;
+      }
+      .contact-form input,
+      .contact-form textarea {
+          width: 100%;
+          padding: 10px;
+          margin-bottom: 15px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+      }
+      .contact-form button {
+          background-color: #28a745;
+          color: white;
+          border: none;
+          padding: 10px 15px;
+          border-radius: 4px;
+          cursor: pointer;
+      }
+      .contact-form button:hover {
+          background-color: #218838;
+      }
+  </style>
+
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">    
 <meta name="viewport" content="width=device-width,minimum-scale=1">
@@ -123,5 +161,24 @@
 
 
 
+
+    <script>
+      document.getElementById('contactForm').addEventListener('submit', function(event) {
+          event.preventDefault(); 
+
+          
+          var name = document.getElementById('name').value;
+          var message = document.getElementById('message').value;
+
+          
+
+          
+          console.log('Name:', name);
+          console.log('Message:', message);
+
+          
+          document.getElementById('contactForm').reset();
+      });
+  </script>
   </body>
 </html>
