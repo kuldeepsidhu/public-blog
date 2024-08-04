@@ -6,8 +6,15 @@
     <description>Recent content in Posts on My New Hugo Site</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 01 Aug 2024 10:23:48 +0530</lastBuildDate>
+    <lastBuildDate>Sat, 03 Aug 2024 10:18:33 +0530</lastBuildDate>
     <atom:link href="https://kuldeepsidhu.github.io/public-blog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello World</title>
+      <link>https://kuldeepsidhu.github.io/public-blog/posts/hello-world/</link>
+      <pubDate>Sat, 03 Aug 2024 10:18:33 +0530</pubDate>
+      <guid>https://kuldeepsidhu.github.io/public-blog/posts/hello-world/</guid>
+      <description>Hello World # Introduction to &amp;ldquo;Hello, World!&amp;rdquo; # The &amp;ldquo;Hello, World!&amp;rdquo; program is often the first step in learning a new programming language. It&amp;rsquo;s a simple yet profound exercise that introduces you to the syntax and fundamentals of coding. Whether you&amp;rsquo;re a beginner taking your first steps into the world of programming or an experienced developer exploring a new language, &amp;ldquo;Hello, World!&amp;rdquo; serves as an important milestone in your coding journey.</description>
+    </item>
     <item>
       <title>Paris Olympics</title>
       <link>https://kuldeepsidhu.github.io/public-blog/posts/paris-olympics/</link>
