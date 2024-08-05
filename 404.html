@@ -185,14 +185,14 @@
 
           console.log(JSON.stringify(requestBody));
 
-          fetchComment();
+          addComment(name, message);
 
 
           
           document.getElementById('contactForm').reset();
       });
 
-      async function fetchComment() {
+      async function addComment(name, message) {
         
         const url = `https://whimsical-kulfi-bc88c4.netlify.app/addcomment/${name}/${message}`;
 
