@@ -1,47 +1,53 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head>
-    <title>Paris Olympics | My New Hugo Site</title>
 
-    <style>
-      body {
-          font-family: Arial, sans-serif;
-          margin: 20px;
-      }
-      .contact-form {
-          max-width: 500px;
-          margin: auto;
-          padding: 20px;
-          border: 1px solid #ddd;
-          border-radius: 5px;
-      }
-      .contact-form label {
-          display: block;
-          margin-bottom: 8px;
-          font-weight: bold;
-      }
-      .contact-form input,
-      .contact-form textarea {
-          width: 100%;
-          padding: 10px;
-          margin-bottom: 15px;
-          border: 1px solid #ccc;
-          border-radius: 4px;
-      }
-      .contact-form button {
-          background-color: #28a745;
-          color: white;
-          border: none;
-          padding: 10px 15px;
-          border-radius: 4px;
-          cursor: pointer;
-      }
-      .contact-form button:hover {
-          background-color: #218838;
-      }
+<head>
+  <title>Paris Olympics | My New Hugo Site</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    .contact-form {
+      max-width: 500px;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .contact-form label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .contact-form button {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .contact-form button:hover {
+      background-color: #218838;
+    }
   </style>
 
-    <meta charset="utf-8">
+  <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">    
 <meta name="viewport" content="width=device-width,minimum-scale=1">
 <meta name="description" content="Excitement Builds for the Paris 2024 Olympics 🔗As the Paris 2024 Olympics approach, excitement is mounting for what promises to be a spectacular celebration of sports and culture. Scheduled to take place from July 26 to August 11, 2024, the Games will showcase the best athletes from around the world competing in a diverse array of events across the French capital.
@@ -65,10 +71,10 @@ Key Highlights 🔗1. Opening Ceremony at the Seine 🔗The Paris 2024 Olympics 
 
 
 
-  </head>
+</head>
 
-  <body>
-    <nav class="navigation">
+<body>
+  <nav class="navigation">
 	
 		<a href="/"> <span class="arrow">←</span>Home</a>
 	
@@ -82,8 +88,8 @@ Key Highlights 🔗1. Opening Ceremony at the Seine 🔗The Paris 2024 Olympics 
 </nav>
 
 
-    <main class="main">
-      
+  <main class="main">
+    
 
 <section id="single">
     <h1 class="title">Paris Olympics</h1>
@@ -158,9 +164,9 @@ Key Highlights 🔗1. Opening Ceremony at the Seine 🔗The Paris 2024 Olympics 
 </section>
 
 
-    </main>
-    
-    <footer id="footer">
+  </main>
+
+  <footer id="footer">
     
 
     <div class="copyright">
@@ -186,66 +192,77 @@ Key Highlights 🔗1. Opening Ceremony at the Seine 🔗The Paris 2024 Olympics 
 
 
 
-    <script>
-      document.getElementById('contactForm').addEventListener('submit', function(event) {
-          event.preventDefault(); 
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function (event) {
+      event.preventDefault(); 
 
-          
-          var name = document.getElementById('name').value;
-          var message = document.getElementById('message').value;
-          var postUrl = window.location.pathname;
+      
+      var name = document.getElementById('name').value;
+      var message = document.getElementById('message').value;
+      var postUrl = window.location.pathname;
+      const currentDate = new Date().toISOString();
 
-          
+      
 
-          
-          console.log('Name:', name);
-          console.log('Message:', message);
-          console.log('PostURL:', postUrl);
+      
+      console.log('Name:', name);
+      console.log('Message:', message);
+      console.log('PostURL:', postUrl);
+      console.log('CurrentDate:', currentDate);
 
-          var requestBody = {};
-          requestBody.name = name;
-          requestBody.message = message;
-          requestBody.postUrl = postUrl;
+      var requestBody = {};
+      requestBody.name = name;
+      requestBody.message = message;
+      requestBody.postUrl = postUrl;
+      requestBody.date = currentDate;
 
-          console.log(JSON.stringify(requestBody));
+      console.log(JSON.stringify(requestBody));
 
-          addComment(name, message);
+      addComment(requestBody);
 
 
-          
-          document.getElementById('contactForm').reset();
-      });
+      
+      document.getElementById('contactForm').reset();
+    });
 
-      async function addComment(name, message) {
+    async function addComment(requestBody) {
+      
+      const url = `https://whimsical-kulfi-bc88c4.netlify.app/addcomment/post`;
+
+      try {
         
-        const url = `https://whimsical-kulfi-bc88c4.netlify.app/addcomment/${name}/${message}`;
+        const response = await fetch(url, {
+          method: 'POST', 
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(requestBody) 
+        });
 
-        try {
+        
+        if (response.ok) {
           
-          const response = await fetch(url);
-
+          const data = await response.json();
+          console.log('Response Data:', data);
+          alert(response);
+          return data;
+        } else {
           
-          if (response.ok) {
-            
-            const data = await response.json();
-            console.log('Response Data:', data);
-            alert(data);
-            return data;
-          } else {
-            
-            console.error('HTTP Error:', response.status, response.statusText);
-            const errorData = await response.text(); 
-            console.error('Error Details:', errorData);
-            alert(errorData);
-            return null;
-          }
-        } catch (error) {
-          
-          console.error('Fetch Error:', error.message);
+          console.error('HTTP Error:', response.status, response.statusText);
+          const errorData = await response.text(); 
+          console.error('Error Details:', errorData);
+          alert(errorData);
           return null;
         }
+      } catch (error) {
+        
+        console.error('Fetch Error:', error.message);
+        return null;
       }
+    }
 
   </script>
-  </body>
+
+</body>
+
 </html>
